@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PortfolioWeb</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Roboto';
+      font-size: 20px;
+      color: #222;
+    }
+    .bg img {
+    width: 100%;
+    }
+    #more {display: none;} 
+    .bg button {
+      width: 50%;
+    }
+    .carousel-caption {
+      position: absolute;
+      top: 50%;
+    }
+    .carousel-caption h1{
+      text-transform: uppercase;
+      text-shadow: 5px 5px 15px #000;
+    }
+    .btn-outline-light:hover{
+      background-color: #fca000;
+    }
+    /* Media Query*/
+    @media (max-width: 992px) {
+    .carousel-caption {
+      position: absolute;
+      top: 50%;
+    }
+    .carousel-caption h1{
+      text-transform: uppercase;
+      text-shadow: 5px 5px 15px #000;
+    }
+    .btn-outline-light:hover{
+      background-color: #fca000;
+    }
+    }
+    @media (max-width: 768px) {
+    .carousel-caption {
+      position: absolute;
+      top: 50%;
+    }
+    .carousel-caption h1{
+      text-transform: uppercase;
+      text-shadow: 5px 5px 15px #000;
+    }
+    .btn-outline-light:hover{
+      background-color: #fca000;
+    }
+    }
+
+    @media (max-width: 576px) {
+    .carousel-caption {
+      position: absolute;
+      top: 50%;
+    }
+    .carousel-caption h1{
+      text-transform: uppercase;
+      text-shadow: 5px 5px 15px #000;
+    }
+    .btn-outline-light:hover{
+      background-color: #fca000;
+    }
+    }
+
+    .navbar {
+      background-color: rgba(46, 46, 46,0.9) !important;
+    }
+    .navbar li a {
+      color: white !important;
+    }
+    .navbar li a:hover {
+      color: #fca000 !important;
+    }
+    footer {
+      background-color: #3f3f3f;
+      color: #d5d5d5;
+    }
+    
+    
+    .btn-outline-dark:hover {
+      background-color: #fca000;
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Style inputs */
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type=submit] {
+      background-color: black;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #fca000;
+    }
+
+    /* Style the container/contact section */
+    .container {
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    /* Create two columns that float next to eachother */
+    .column {
+      float: left;
+      width: 50%;
+      margin-top: 6px;
+      padding: 20px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+          }
+          .fa {
+        padding: 20px;
+        font-size: 20px;
+        text-align: center;
+        margin: 5px 5px 5px 5px;
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .fa:hover {
+          opacity: 0.7;
+      }
+
+
+      .fa-twitter {
+        border: 2px solid #ffffff;
+        color: white;
+      }
+
+      .fa-google {
+        border: 2px solid #ffffff;
+        color: white;
+      }
+
+      .fa-youtube {
+        border: 2px solid #ffffff;
+        color: white;
+      }
+
+      .fa-instagram {
+        border: 2px solid #ffffff;
+        color: white;
+      }
+
+      .fa-pinterest {
+        border: 2px solid #ffffff;
+        color: white;
+      }
+
+      .fa-flickr {
+        border: 2px solid #ffffff;
+        color: white;
+      }
+
+  </style>
+
+    <nav class="navbar navbar-expand-sm  navbar-dark sticky-top">
+      <!-- Brand/logo -->
+      <div class="container">
+        <a class="navbar-brand" href="#navbar">
+          <img src="./img/logo.png" alt="logo" style="width:40px;">
+        </a>
+      
+      <!-- Links -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#navbar">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  <!-- navbar end -->
+
+  <!-- bgimg -->
+    <div class="bg" id="bgimg">
+      <div class="bg-item">
+        <img src="./img/bg1.png">
+        <div class="carousel-caption col-md-4">
+          <h1 style="text-align: left;">Trung Vu</h1>
+          <h2 style="text-align: left;">I am <span style="color: #fca000">Webdeveloper</span><br>and <span style="color: #fca000">UX/UI Designer</span></h2>
+          <p style="text-align: left;">
+            <a href="#aboutus">
+              <button type="button" class="btn btn-outline-light btn-lg">
+                DESIGNER
+              </button>
+            </a> 
+          </p>   
+        </div>
+      </div>
+    </div>
+  <!-- bgimg end-->
+
+    <!-- About us -->
+    <section>
+      <br>
+      <h1 style="text-align: center;">About us</h1>
+      <!-- I need a small line under the heading -- styling element as per my wireframe -->
+      <hr class="w-100">
+      <div class="container" id="aboutus">
+        <div class="row">
+
+          <!-- Image content in left side -->
+          <div class="col">
+            <img src="./img/ava.jpg" height="400">
+          </div>
+              
+          <!-- Body content in right side-->
+          <div class="col">
+            <br>
+            <h2>Trung Vu</h2>
+            <!-- Read more read less --->
+            <p>I am a person who is eager to learn new things, <span id="dots">...</span><span id="more">loves to create, so easily attracted by the 2D subject and has identified my career goal in the future to become an artist 2D model design and animation</span></p>
+
+            <button onclick="myFunction()" id="myBtn" type="button" class="btn btn-outline-dark btn-md">Read more</button>
+            <script>
+              function myFunction() {
+                var dots = document.getElementById("dots");
+                var moreText = document.getElementById("more");
+                var btnText = document.getElementById("myBtn");
+
+                if (dots.style.display === "none") {
+                  dots.style.display = "inline";
+                  btnText.innerHTML = "Read more"; 
+                  moreText.style.display = "none";
+                } else {
+                  dots.style.display = "none";
+                  btnText.innerHTML = "Read less"; 
+                  moreText.style.display = "inline";
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <br>
+    </section>
+    <!-- End about us --->
+
+    <!-- Portfolio -->
+    <section style="background-color: rgba(46, 46, 46); color: white;">
+      <br>
+      <div class="container" id="portfolio">
+        <h1 style="text-align: center;">Portfolio</h1>
+        <p>
+          ​<a href="#portfolio"><button class="btn btn-primary btn-sm active">All</button></a>
+          <a href="#portfolio"><button class="btn btn-primary btn-sm">Typography</button></a>
+          <a href="#typo"><button class="btn btn-primary btn-sm">Webdesign</button></a>
+          <a href="#animation"><button class="btn btn-primary btn-sm">Animation</button></a>
+        </p>
+        <h3 style="text-align: center;">Typography</h3>
+        <hr class="w-75 bg-light">
+        <div class="row-1" id="typo">
+          <div class="col">
+            <img src="./img/1.jpg" width="350" height="300">
+            <img src="./img/2.jpg" width="350" height="300">
+            <img src="./img/3.jpg" width="350" height="300">
+          </div>
+        </div>
+        <br>
+        <h3 style="text-align: center;">Webdesign</h3>
+        <hr class="w-75 bg-light">
+        <div class="row-2" id="web">
+          <div class="col">
+            <img src="./img/4.jpg" width="350" height="300">
+            <img src="./img/5.jpg" width="350" height="300">
+          </div>
+        </div>
+        <br>
+        <h3 style="text-align: center;">Animation</h3>
+        <hr class="w-75 bg-light">
+        <div class="row-3" id="animation">
+          <div class="col">
+            <img src="./img/6.jpg" width="350" height="300">
+          </div>
+        </div>
+      </div>
+      <hr class="w-100">        
+    </section>
+    <!-- end port-->
+
+    <!-- Contact me-->
+    <section>
+      <br>
+      <div id="Contact">
+        <h1 style="text-align: center;">Contact me</h1>
+        <hr class="w-100">
+        <div class="container">
+          <div class="row">
+            <div class="column">
+              <p class="semi-bold">
+                Phone: 014114785452 <br>
+                Email: 5455452@gmail.com <br>
+                Quan Nhan Street, Thanh Xuan, Ha Noi
+              </p>
+            </div>
+            <div class="column">
+              <form action="/action_page.php">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Email</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your email..">
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End contact me -->
+
+    <!--Footer-->
+    <footer>
+      <div class="container padding">
+        <div class="row text-center">
+          <div class="col-12">
+            <br>
+            <img src="./img/logo.png" width="40" height="56.56">
+            <br>
+            <br>
+            <a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+            <a href="https://www.google.com/" class="fa fa-google"></a>
+            <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+            <a href="https://www.pinterest.com/" class="fa fa-pinterest"></a>
+            <a href="https://www.flickr.com/" class="fa fa-flickr"></a>
+            <hr class="light">
+            <h5>&copy; Copyright 2021<br>Created by Trung Vu </h5>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
